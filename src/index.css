@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Nunito', 'Onest', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #132347;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: #FBBF24;
+    color: #132347;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Bright Playful Elevation (no subpixel CSS 3D text blur) */
+.card-elevated {
+  box-shadow:
+    0 20px 44px -20px rgba(29, 78, 216, 0.14),
+    0 4px 14px -4px rgba(14, 165, 233, 0.08);
+}
+
+.card-elevated-hover {
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms ease;
+}
+
+.card-elevated-hover:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 52px -18px rgba(2, 132, 199, 0.24),
+    0 10px 24px -8px rgba(245, 158, 11, 0.18);
+}
+
+.card-dark-elevated {
+  box-shadow:
+    0 26px 54px -18px rgba(15, 45, 107, 0.45),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
+}
+
+/* Safari & Chromium crisp frosted glass */
+.glass-surface {
+  background-color: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.touch-ripple {
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

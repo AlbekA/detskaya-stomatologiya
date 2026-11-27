@@ -1,0 +1,6 @@
+{
+  "name": "AuraDental — Премиальная стоматология",
+  "description": "Премиальная стоматологическая клиника в Москва-Сити: цифровая 3D-диагностика, лечение под микроскопом, эстетические виниры, имплантация и AI-консультант.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
